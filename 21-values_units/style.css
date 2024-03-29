@@ -1,0 +1,21 @@
+h1{
+    font-size: 32px;
+    padding: 10px;
+    background-color: rgb(65, 16, 16);
+    color: rgb(235, 235, 235);
+    width: calc(10 * 50px);
+    box-sizing: border-box;
+}
+
+body > p{
+    font-size: 20px;
+}
+
+.wrapper{
+    font-size: 10px;
+    background-color: rgb(105, 105, 255);
+}
+.wrapper p {
+    width: 50em;
+    background-color: brown;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm</title>
+</head>
+
+<body>
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+    <label for="delay">Delay:</label>
+    <input type="text" id="delay"><br><br>
+    <button id="set-alarm">Set alarm</button>
+    <div id="output"></div>
+
+    <script>
+        const alarm = document.querySelector("#set-alarm");
+        const name = document.querySelector("#name");
+        const delay = document.querySelector("#delay");
+        const msg = document.querySelector("#output");
+
+        function setAlarm (name, delay)
+        {
+            return new Promise((resolve, reject) =>
+            {
+                if (delay < 0)
+                {
+                    throw new Error('Alarm delay must not be negative');
+                }
+                setTimeout(() =>
+                {
+                    resolve(`Wake up, ${name}!`);
+                }, delay);
+            });
+        }
+
+        // Using Promise chaining
+        // alarm.addEventListener('click', () =>
+        // {
+        //     if (name.value === "" || !Number(delay.value))
+        //     {
+        //         alert("Please enter a name and delay number");
+        //         return;
+        //     }
+        //     setAlarm(name.value, Number(delay.value))
+        //         .then((message => msg.textContent = message))
+        //         .catch(error => msg.textContent = `Couldn't set an alarm: ${error}`);
+        // });
+
+        // Using async and await
+        alarm.addEventListener('click', async () =>
+        {
+            try
+            {
+                if (name.value === "" || !Number(delay.value))
+                {
+                    alert("Please enter a name and delay number");
+                    return;
+                }
+                let message = await setAlarm(name.value, Number(delay.value));
+                msg.textContent = message;
+            } catch (error)
+            {
+                msg.textContent = `Couldn't set an alarm: ${error}`;
+            }
+        });
+    </script>
+</body>

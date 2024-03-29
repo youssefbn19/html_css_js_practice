@@ -1,0 +1,33 @@
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+div.img-container{
+    max-width: 500px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+img.img-bg{
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3em;
+    color: rgb(123, 190, 248);
+}
+
+button.btn-setName{
+    background-color: rgb(123, 190, 248);
+    color: rgb(241, 241, 241);
+    font-size: 1em;
+    padding: 12px 24px;
+    margin: 8px auto;
+    display: block;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+button.btn-setName:hover {
+    background-color: rgb(94, 177, 250);
+}

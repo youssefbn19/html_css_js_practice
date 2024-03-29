@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- External JavaScript -->
+    <!--
+        "defer" attribute tells the browser to continue downloading the HTML content once
+        the <script> tag element has been reached.
+    -->
+    <script src="script.js" defer></script>
+    <title>Apply JavaScript example</title>
+</head>
+
+<body>
+    <button>Click me</button>
+    <!-- Internal JavaScript -->
+    <!-- <script>
+    document.addEventListener("DOMContentLoaded", () =>
+    {
+        function createParagraph ()
+        {
+            const para = document.createElement("p");
+            para.textContent = "You clicked the button!";
+            document.body.appendChild(para);
+        }
+
+        const buttons = document.querySelectorAll("button");
+
+        for (const button of buttons)
+        {
+            button.addEventListener("click", createParagraph);
+        }
+    });
+
+    </script> -->
+</body>
+
+</html>

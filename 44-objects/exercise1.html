@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Object basics: Task 2</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    let pirateInfo;
+
+    // Add your code here
+    const pirate = {
+        name: "The Straw Hat Crew",
+        nationality: "western island",
+        genre: "Pirates",
+        members: 9,
+        formed: 1999,
+        split: false,
+        islands: [ { name: "Arabasta island", year: 2002 }, { name: "sky island", year: 2005 } ],
+        // ["Luffy", "Zoro", "Sanji", "jimbi", "Franky", "Chopper", "Usop", "Nami", "Robbin"],
+    };
+    pirateInfo = `${pirate.name} are ${pirate.genre} who are from ${pirate.nationality},
+                  formed in ${pirate.formed} consists of  ${pirate[ "member" ]} people.
+                  They sailed to many islands like ${pirate.islands[ 0 ].name} in ${pirate.islands[ 0 ].year}, and also to ${pirate.islands[ 1 ].name} in ${pirate.islands[ 1 ].year}`;
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = pirateInfo;
+    section.appendChild(para1);
+</script>
+
+</html>

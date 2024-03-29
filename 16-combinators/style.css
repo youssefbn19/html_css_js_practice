@@ -1,0 +1,85 @@
+/* Child Combinator */
+.container1 > h1{
+    color: blue;
+}
+/* Descendant Combinator */
+.container1 h2{
+    background-color: blue;
+    color: white;
+}
+.container1 p span{
+    font-size: 200%;
+}
+/* ID selector */
+#special{
+    background-color: yellow;
+}
+/* Class Selector */
+.alert{
+    border: 1px solid grey;
+}
+[class~="stop"]{
+    background-color: red;
+}
+[class~="go"]{
+    background-color: green;
+}
+/* pseudo class selector */
+.container3 a:hover{
+    text-decoration: none;
+}
+.container3 a{
+    color: orange;
+}
+.container3 a:visited{
+    color: green;
+}
+
+.container3 > :first-child{
+    font-size: 150%;
+}
+.container3 > :first-child::first-line{
+    color:red;
+}
+table{
+    /* border:none; */
+    border-spacing: 0;
+    width: 50%;
+}
+tr:nth-child(even){
+    background-color: #333;
+    color: white
+}
+
+.container4 h2 + p{
+    color: red;
+}
+
+.container4 ul.list > li{
+    list-style: none;
+    border-bottom: 1px solid grey ;
+}
+.container5 ul{
+    list-style: none;
+}
+.container5 ul li{
+    width: 50%;
+}
+.container5 ul li a{
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    border-width: 5px;
+    border-style: solid;
+    margin: 5px 0px;
+}
+.container5 a[title]{
+    border-color: pink;
+}
+
+.container5 a[href*="contact"]{
+    border-color: orange;
+}
+.container5 a[href^="https"]{
+    border-color: green;
+}

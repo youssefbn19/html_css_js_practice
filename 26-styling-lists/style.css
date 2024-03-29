@@ -1,0 +1,40 @@
+/* General styles */
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+
+/* style.css | http://127.0.0.1:5500/26-styling-lists/style.css?_cacheOverride=1707231497864 */
+
+h2 {
+font-size:  2rem;
+  padding-left: 30px;
+  background: url("https://img.icons8.com/material-outlined/24/external-link.png") no-repeat 0 100%;
+  background-size: 24px 24px;
+}
+
+
+ul,
+ol,
+dl,
+p {
+  font-size: 1.5rem;
+}
+
+li,
+p {
+  line-height: 1.5;
+}
+
+/* Description list styles */
+
+dd,
+dt {
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: bold;
+}

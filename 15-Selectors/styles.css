@@ -1,0 +1,93 @@
+article *:first-child{
+    color: blue;
+}
+/* Select Elements with class attribute */
+[class]{
+    font-size: 1.5rem;
+}
+/* Select Div Elements with class attribute contains only the value container */
+div[class="container"]{
+    background-color: rgb(252, 223, 185);
+    padding: 10px;
+}
+/* Select h2 Elements with class attribute contains the value title */
+h2[class~="title"]{
+    font-size: 3rem;
+    color: rgb(73, 73, 73);
+    border-bottom: 5px double rgb(73, 73, 73);
+}
+/* Select a elements with href attribute contains the exact value "http://example.com" */
+a[href="http://example.com"]:hover{
+    color: rgb(78, 179, 78);
+    text-decoration: underline;
+}
+/* Select a elements with lang attribute have exact zh value or start with it followed by hyphen(-) */
+a[lang|="zh"]{
+    text-decoration: none;
+}
+/* Matches a elements with an lang attribute, whose value begins with zh. */
+a[lang^="zh"]{
+    color: brown;
+}
+/* Matches a elements with an lang attribute whose value ends with -ZH. */
+a[lang$="-ZH"]{
+    font-weight: bold;
+}
+/* Matches a elements with an lang attribute whose value contains "-" anywhere within the string. */
+a[lang*="-"]{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section p:first-child{
+    font-size: 1.2rem;
+}
+section p:first-child::first-line{
+    color: #7e7e7e;
+}
+p.before-after{
+    color: rgb(49, 49, 49);
+}
+p.before-after::before{
+    content: "I'm From The \"before pseudo element\" and I came before the real content";
+    color: rgb(124, 204, 124);
+    font-weight: 600;
+}
+p.before-after::after{
+    content: "I'm From The \"after pseudo element\" and I came after the real content";
+    color: rgb(204, 124, 124);
+    font-weight: 600;
+}
+
+
+
+/* Arrow Box */
+.arrow_box {
+	position: relative;
+	background: #88b7d5;
+	border: 4px solid #c2e1f5;
+    width: 50%;
+    height: 5rem;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgb(30, 34, 36,0);
+	border-bottom-color: #88b7d5;
+	border-width: 30px;
+	margin-left: -30px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #c2e1f5;
+	border-width: 36px;
+	margin-left: -36px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Functions: Task 3</title>
+    <style>
+        p {
+            color: purple;
+            margin: 0.5em 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    const names = [ 'Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada' ];
+    const para = document.createElement('p');
+
+    // Add your code here
+    function random (start, end)
+    {
+        return Math.floor(Math.random() * (end - start)) + start;
+    }
+    function chooseName (myArry)
+    {
+        const randomNumber = random(2, 7);
+        return myArry[ randomNumber ];
+    }
+    // Don't edit the code below here!
+    para.textContent = chooseName(names);
+    const section = document.querySelector('section');
+    section.appendChild(para);
+</script>
+
+</html>

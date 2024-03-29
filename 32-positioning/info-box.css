@@ -1,0 +1,62 @@
+html {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.info-box {
+  width: 450px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: rgb(71, 206, 240);
+}
+.info-box ul {
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+  display: flex;
+}
+
+.info-box li {
+  width: 150px;
+}
+
+.info-box li a {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(45, 133, 155);
+    line-height: 3;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+.info-box li a:focus,
+.info-box li a:hover,
+.info-box li a.active-tab {
+  background-color: rgba(71, 206, 240);
+}
+
+.info-box .panels {
+  height: 352px;
+  position: relative;
+}
+.info-box article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 10px 20px;
+  color: white;
+  background-color: rgba(71, 206, 240);
+}
+
+.info-box .active-panel {
+  z-index: 1;
+}

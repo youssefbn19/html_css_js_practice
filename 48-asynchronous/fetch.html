@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching Data</title>
+</head>
+
+<body>
+    <script>
+        const productsReq = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
+        productsReq
+            .then((response) =>
+            {
+                if (!response.ok)
+                {
+                    throw new Error(`HTTP error :) : ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) =>
+            {
+                console.log(data);
+            })
+            .catch((error) =>
+            {
+                console.log(`An error occurs: ${error}`);
+            })
+    </script>
+</body>

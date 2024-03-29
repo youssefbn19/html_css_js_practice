@@ -1,0 +1,30 @@
+@layer page, site;
+@import url("site.css") layer(site) (width < 32rem);
+@import url("theme.css") layer(site.theme) (width < 32rem);
+
+
+@layer page {
+  h1 {
+    text-decoration: overline;
+    color: red;
+  }
+  body{
+    background-color: beige;
+  }
+}
+
+p.box-one{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid red;
+    inline-size: 40rem;
+    block-size: 5rem;
+}
+p.box-two{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid red;
+    inline-size: 40rem;
+    block-size: 5rem;
+    box-sizing: border-box;
+}

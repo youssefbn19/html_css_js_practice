@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSS Grid starting point</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+
+        .container>div {
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgb(207, 232, 220);
+            border: 2px solid rgb(79, 185, 227);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            /* grid-template-columns: 2fr repeat(2, 1fr); */
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple grid example</h1>
+
+    <div class="container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+        <div>Four</div>
+        <div>Five</div>
+        <div>Six</div>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vero quas autem nisi commodi accusamus id
+            excepturi dolor dolores eum sequi, cum, in sapiente quibusdam libero sit harum quos repellendus?
+            Voluptate, dignissimos nostrum recusandae voluptatum nam doloribus delectus ex a ipsam rem. Ab quidem dicta
+            quis reiciendis unde? Culpa, veniam magnam. Dicta animi reiciendis eaque ullam, asperiores corporis ducimus
+            perferendis.
+            Tempore molestias excepturi consequuntur doloribus, sapiente nihil unde, pariatur, eveniet aliquid culpa at
+            possimus iste. Assumenda, error, animi excepturi in, optio iure et tempora ea nostrum vero repellendus
+            asperiores aliquam.
+            Itaque sunt sed provident ducimus. Accusamus vel iure nulla rem quaerat assumenda ullam sequi quas nihil ad
+            labore minus aspernatur illum aliquid voluptatum voluptate, eius magni necessitatibus libero quo? Est?</div>
+    </div>
+
+</body>
+
+</html>
