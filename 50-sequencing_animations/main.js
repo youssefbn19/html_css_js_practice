@@ -36,15 +36,15 @@ const alice3 = document.querySelector("#alice3");
 // }).then(() => alice3.animate(aliceTumbling, aliceTiming).finished);
 
 // Using async and await
-// async function animation(){
-//     while (true){
-//         await alice1.animate(aliceTumbling, aliceTiming).finished;
-//         await alice2.animate(aliceTumbling, aliceTiming).finished;
-//         await alice3.animate(aliceTumbling, aliceTiming).finished;
-//         await alice3.animate(aliceTumblingBack, aliceTiming).finished;
-//         await alice2.animate(aliceTumblingBack, aliceTiming).finished;
-//         await alice1.animate(aliceTumblingBack, aliceTiming).finished;
-//     }
+async function animation(){
+    while (true){
+        await alice1.animate(aliceTumbling, aliceTiming).finished;
+        await alice2.animate(aliceTumbling, aliceTiming).finished;
+        await alice3.animate(aliceTumbling, aliceTiming).finished;
+        await alice3.animate(aliceTumblingBack, aliceTiming).finished;
+        await alice2.animate(aliceTumblingBack, aliceTiming).finished;
+        await alice1.animate(aliceTumblingBack, aliceTiming).finished;
+    }
 
-// }
-// animation();
+}
+animation();
