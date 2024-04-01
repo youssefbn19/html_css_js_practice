@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+        li {
+            margin-bottom: 10px;
+        }
+
+        li button {
+            font-size: 12px;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const listContainer = document.querySelector("ul");
+        const newItem = document.querySelector('input');
+        const addBtn = document.querySelector('button');
+
+        function addNewItem ()
+        {
+            const item = newItem.value;
+            const li = document.createElement('li');
+            const span = document.createElement('span');
+            const button = document.createElement('button');
+
+            newItem.value = '';
+            li.appendChild(span);
+            li.appendChild(button);
+            span.textContent = item;
+            button.textContent = "Delete";
+
+            listContainer.appendChild(li);
+            button.addEventListener('click', () =>
+            {
+                li.remove();
+            });
+
+            newItem.focus();
+        }
+
+        addBtn.addEventListener('click', addNewItem);
+        // If the user click the Enter key it will add new item to the list 
+        newItem.addEventListener('keyup', (e) =>
+        {
+            if (e.key === "Enter" || e.keyCode === 13)
+            {
+                addNewItem();
+            }
+        });
+    </script>
+</body>
+
+</html>
