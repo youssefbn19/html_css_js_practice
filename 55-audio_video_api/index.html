@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video player example</title>
+    <link rel="stylesheet" type="text/css" href="custom_player.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="player">
+        <video controls>
+            <source src="video/sintel-short.mp4" type="video/mp4" />
+            <source src="video/sintel-short.webm" type="video/webm" />
+            <p>
+                Your browser doesn't support HTML video. Here is a
+                <a href="https://www.youtube.com/watch?v=HOfdboHvshg&pp=ygUOc2ludGVsIHRyYWlsZXI%3D">link to the
+                    video</a> instead.
+            </p>
+        </video>
+        <div class="controls">
+            <button class="play toggle" aria-label="play pause toggle"><img src="./assets/play.svg"
+                    alt="play icon"></button>
+            <button class="stop" aria-label="stop"><img src="./assets/stop.svg" alt="stop icon"></button>
+            <div class="timer">
+                <div class="timeline">
+                    <div class="progress"></div>
+                </div>
+                <span aria-label="timer">00:00</span>
+            </div>
+            <button class="rwd" aria-label="rewind"><img src="./assets/rewind.svg" alt="rewind icon"></button>
+            <button class="fwd" aria-label="fast forward"><img src="./assets/fast-forward.svg"
+                    alt="fast forward icon"></button>
+        </div>
+    </div>
+    <p>Sintel &copy; copyright Blender Foundation | <a
+            href="https://studio.blender.org/films/sintel/">studio.blender.org/films/sintel/</a>.</p>
+    <script src="custom-player.js"></script>
+</body>
+
+</html>
