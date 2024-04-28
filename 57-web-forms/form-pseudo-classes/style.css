@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #CFDBE4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-us{
+    background-color: #fff;
+    max-width: 800px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    border-radius: 50px;
+    margin: 30px auto;
+}
+
+h1{
+    font-weight: 700;
+    margin: 0px 0px 20px 0px;
+    font-size: 40px;
+}
+h1 span {
+    color: #DD5471;
+}
+
+form{
+    display: grid;
+    gap: 20px;
+}
+p {
+    max-width: 540px;
+    margin: 0px 0px 40px 0px;
+}
+.input-container{
+    display: flex;
+}
+form input, form button, form textarea{
+    padding: 13px 20px;
+    resize: none;
+    width: 90%;
+}
+
+
+form button{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 0;
+    border: none;
+    background-color: #DD5471;
+}
+
+input + span, textarea + span{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    display: block;
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+input + span::before, textarea + span::before{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+input:invalid, textarea:invalid{
+    border: 1px solid red;
+}
+input:valid, textarea:valid{
+    border: 1px solid green;
+}
+input:invalid + span::before,
+textarea:invalid + span::before,
+.input-container input:empty + span::before{
+    content: "✖";
+    color: red;
+}
+input:valid + span::before,
+textarea:valid + span::before{
+    content: "✓";
+    color: green;
+
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+    appearance: none;
+}
+
+input[type="number"]:out-of-range + span::before{
+    content: "✘";
+    color: red;
+}

@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Box</title>
+    <style>
+        select {
+            appearance: none;
+            padding: 5px 40px 5px 10px;
+            border: 1px solid gray;
+            font-size: inherit;
+        }
+
+        .select-wrapper {
+            position: relative;
+            width: fit-content;
+
+        }
+
+        .select-wrapper::after {
+            content: "▼";
+            display: flex;
+            font-size: 1rem;
+            top: 0px;
+            right: 10px;
+            height: 100%;
+            align-items: center;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="select-wrapper">
+        <select name="language" id="language">
+            <option value="" selected>---Select your mother language---</option>
+            <option value="arabic">Arabic</option>
+            <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="spanish">Spanish</option>
+            <option value="turkish">Turkish</option>
+            <option value="italian">Italian</option>
+        </select>
+    </div>
+</body>
+
+</html>

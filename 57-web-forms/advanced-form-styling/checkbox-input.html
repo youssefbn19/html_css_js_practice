@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Button</title>
+    <style>
+        input[type="checkbox"] {
+            appearance: none;
+            width: 1em;
+            height: 1em;
+            border: 1px solid gray;
+
+            position: relative;
+            vertical-align: -4px;
+            color: green;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]::before {
+            content: "✔";
+            position: absolute;
+            top: -4px;
+
+            visibility: hidden;
+        }
+
+        input[type="checkbox"]:checked::before {
+            visibility: visible;
+        }
+
+        input[type="checkbox"]:disabled {
+            opacity: 0.2;
+        }
+
+        label {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Favorite fruits:</legend>
+        <label for="banana">
+            <input type="checkbox" name="fruits" id="banana">
+            Banana
+        </label>
+        <label for="kiwi">
+            <input type="checkbox" name="fruits" id="kiwi">
+            Kiwi
+        </label>
+        <label for="orange">
+            <input type="checkbox" name="fruits" id="orange">
+            Orange
+        </label>
+        <label for="dragon-fruit">
+            <input type="checkbox" name="fruits" id="dragon-fruit">
+            Dragon fruit
+        </label>
+        <label for="mango">
+            <input type="checkbox" name="fruits" id="mango">
+            Mango
+        </label>
+    </fieldset>
+</body>
+
+</html>

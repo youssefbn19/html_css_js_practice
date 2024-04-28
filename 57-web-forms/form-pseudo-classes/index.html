@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Contact us</title>
+</head>
+
+<body>
+    <div class="contact-us">
+        <h1>Get in <span>Touch</span></h1>
+        <p>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit
+            netus.</p>
+        <form action="/my-form-handling-page" method="post">
+            <div class="input-container">
+                <input type="text" name="name" id="name" placeholder="Name" name="user_name" required>
+                <span></span>
+            </div>
+            <div class="input-container">
+                <input type="email" name="email" id="email" placeholder="E-mail" name="user_email" required>
+                <span></span>
+            </div>
+            <div class="input-container">
+                <input type="number" min="12" placeholder="You must be 12+" />
+                <span></span>
+            </div>
+            <div class="input-container">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" name="user_message"
+                    required></textarea>
+                <span></span>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>

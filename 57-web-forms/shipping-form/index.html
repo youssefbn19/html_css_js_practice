@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shipping Form</title>
+</head>
+
+<body>
+    <form>
+        <fieldset id="shipping">
+            <legend>Shipping address</legend>
+            <div>
+                <label for="name1">Name: </label>
+                <input id="name1" name="name1" type="text" required />
+            </div>
+            <div>
+                <label for="address1">Address: </label>
+                <input id="address1" name="address1" type="text" required />
+            </div>
+            <div>
+                <label for="pcode1">Zip/postal code: </label>
+                <input id="pcode1" name="pcode1" type="text" required />
+            </div>
+        </fieldset>
+        <fieldset id="billing">
+            <legend>Billing address</legend>
+            <div>
+                <label for="billing-checkbox">Same as shipping address:</label>
+                <input type="checkbox" id="billing-checkbox" checked />
+            </div>
+            <div>
+                <label for="name" class="billing-label disabled-label">Name: </label>
+                <input id="name" name="name" type="text" disabled required />
+            </div>
+            <div>
+                <label for="address2" class="billing-label disabled-label">
+                    Address:
+                </label>
+                <input id="address2" name="address2" type="text" disabled required />
+            </div>
+            <div>
+                <label for="pcode2" class="billing-label disabled-label">
+                    Zip/postal code:
+                </label>
+                <input id="pcode2" name="pcode2" type="text" disabled required />
+            </div>
+        </fieldset>
+        <div><button>Submit</button></div>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>
+        {
+            const billingCheck = document.querySelector("#billing-checkbox");
+            billingCheck.addEventListener('change', () =>
+            {
+                const labels = document.querySelectorAll(".billing-label");
+                for (const label of labels)
+                {
+                    if (label.getAttribute("class") === "billing-label disabled-label")
+                    {
+                        label.setAttribute("class", "billing-label");
+                        label.nextElementSibling.disabled = false;
+                    } else
+                    {
+                        label.setAttribute("class", "billing-label disabled-label");
+                        label.nextElementSibling.disabled = true;
+                    }
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

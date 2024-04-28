@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button</title>
+    <style>
+        label {
+            display: block;
+        }
+
+        input[type="radio"] {
+            appearance: none;
+            width: 1.2em;
+            height: 1.2em;
+            border: 1px solid gray;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            vertical-align: -2px;
+        }
+
+        input[type="radio"]::before {
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 1.6px;
+            content: "";
+            width: 0.75em;
+            height: 0.75em;
+            background-color: rgb(28, 236, 28);
+            border-radius: 10px;
+
+            transform: scale(0);
+            transform-origin: center;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="radio"]:checked::before {
+            transform: scale(1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        input[type="radio"]:indeterminate {
+
+            /* 
+                animation-name: outline-size;
+                animation-duration: 0.6s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear; 
+            */
+            /* shortcut */
+            animation: outline-size 0.6s linear infinite;
+        }
+
+        @keyframes outline-size {
+            from {
+                border: 1px solid rgb(95, 255, 80);
+            }
+
+            to {
+                border: 6px solid rgb(95, 255, 80);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Favorite sport:</legend>
+        <label for="baseball">
+            <input type="radio" name="sport" id="baseball">
+            Baseball
+        </label>
+        <label for="football">
+            <input type="radio" name="sport" id="football">
+            Football
+        </label>
+        <label for="tennis">
+            <input type="radio" name="sport" id="tennis">
+            Tennis
+        </label>
+        <label for="rugby">
+            <input type="radio" name="sport" id="rugby">
+            Rugby
+        </label>
+        <label for="basketball">
+            <input type="radio" name="sport" id="basketball">
+            Basketball
+        </label>
+    </fieldset>
+</body>
+
+</html>
